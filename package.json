@@ -1,0 +1,17 @@
+{
+  "name": "elainswebsite",
+  "version": "1.0.0",
+  "description": "new website",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  },
+  "devDependencies": {
+    "gulp-sass": "^2.2.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "elain tsai",
+  "license": "ISC"
+}
