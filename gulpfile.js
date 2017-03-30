@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 
 gulp.task('html', function() {
   return gulp.src(srcFolder + "**/*.html")
-      .pipe(gulp.dest( outputFolder + "/html"));
+      .pipe(gulp.dest( outputFolder));
 });
 
 gulp.task('default', ['serve']);
