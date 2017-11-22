@@ -1,0 +1,67 @@
+.hero {
+  $root: &;
+  background-color: $white;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    height: 100vh;
+  }
+
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    justify-content: center;
+
+    &:before {
+      content: " ";
+      display: table;
+    }
+  }
+
+  &__title {
+    color: $dark-gray;
+    font-size: 4rem;
+    text-transform: none;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__subtitle {
+    color: $primary;
+    font-family: Aleo, serif;
+    font-size: 1.75rem;
+    padding: 25px 0 50px 0;
+    margin: 0;
+  }
+
+  &__contact {
+    position: relative;
+    padding: 75px 0 0 0;
+    display: flex;
+
+    a {
+      text-decoration: none;
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &--three-column {
+    height: auto;
+
+    #{$root}__container {
+      justify-content: center;
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+}

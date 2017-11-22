@@ -10,12 +10,18 @@ var srcFolder = "src/";
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        server: "."
+        server: "./docs"
     });
 
     gulp.watch(srcFolder + "sass/components/*.scss", ['sass']);
-    gulp.watch(srcFolder + "**/*.html").on('change', browserSync.reload);
+    gulp.watch(srcFolder + "js/*.js", ["scripts", function(){browserSync.reload();}]);
+    gulp.watch(srcFolder + "**/*.html", ['html', function(){browserSync.reload();}]);
+    gulp.watch(srcFolder + "assets/*.*", ["assets", "reload"]);
 });
+
+gulp.task('reload', function(){
+    browserSync.reload
+})
 
 gulp.task('build', ['html','sass','scripts', 'assets']);
 

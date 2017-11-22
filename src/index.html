@@ -2,33 +2,135 @@
 <html>
 	<head>
 		<link href="/css/app.css" rel="stylesheet" />
+		<script src="https://use.fontawesome.com/7693ad43b8.js"></script>
+
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+		</style>
+
 	</head>
 	<body>
 
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">
-		        <img alt="Brand" src="...">
-		      </a>
-		    </div>
+		<header class="nav-header">
+			<div class="nav-header__container">
+				<div class="nav-header__logo">
+					<a href="/"><img src="assets/logo.png" alt="Elain Tsai"/></a>
+				</div>
+				<ul class="nav-header__menu">
+					<a href="#" class="button--underline"><li>Projects</li></a>
+					<a href="#" class="button--underline"><li>Resume</li></a>
+				</ul>
+			</div>
+		</header>
 
-				<nav class="navbar navbar-default navbar-fixed-top">
-				  <div class="container">
-				    <ul class="nav navbar-nav">
-							<li>
-								<a href="#">about</a>
-							</li>
-							<li>
-								<a href="#">work</a>
-							</li>
-						</ul>
-				  </div>
-				</nav>
-		  </div>
-		</nav>
+		<section class="hero">
+			<div class="hero__container">
+				<h1 class="hero__title">Hi, I’m Elain Tsai —<br>I design and build digital products</h1>
+				<h2 class="hero__subtitle">that are beautiful, usable, and empowering for diverse audiences.</h2>
+				<a href="mailto:contact@elaintsai.com" target="_blank" class="button--underline button--large">Let's Work Together!</a>
+				<div class="hero__contact">
+					<a href="contact@elaintsai.com" target="_blank" class="button--social"><i class="fa fa-envelope"></i></a>
+					<a href="https://www.linkedin.com/in/elaintsai" target="_blank" class="button--social"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.dribbble.com/elaintsai" target="_blank" class="button--social"><i class="fa fa-dribbble"></i></a>
+					<a href="https://www.instagram.com/elaindesigns" target="_blank" class="button--social"><i class="fa fa-instagram"></i></a>
+				</div>
+			</div>
+		</section>
 
-		<header>Elain's Site. Hi.</header>
+		<section class="callout">
+			<div class="callout__container">
+				<a class="three-column" href="/traceable.html">
+					<div class="three-column__category">
+						Projects
+					</div>
+					<h3 class="three-column__title">
+						Collection of work from current and previous clients.
+					</h3>
+				</a>
+				<a class="three-column" href="/daily-ui.html">
+					<div class="three-column__category">
+						Challenge
+					</div>
+					<h3 class="three-column__title">
+						Becoming a better designer with the #dailyui challenge.
+					</h3>
+				</a>
+				<a class="three-column" href="http://elainoo.com" target="_blank">
+					<div class="three-column__category">
+						Blog
+					</div>
+					<h3 class="three-column__title">
+						Personal outlet for my interests in fashion, travel, and health & fitness.
+					</h3>
+				</a>
+			</div>
+		</section>
+
+		<!--<section class="work">
+			<div class="container">
+				<div class="row">
+					<div class="container">
+						<div class="section-header">Work —</div>
+					</div>
+				</div>
+
+				<a href="#">
+					<div class="row preview-row">
+						<div class="col-md-4 col-sm-4">
+              <img src="/assets/lgb-preview.jpg" class="img-responsive">
+            </div>
+
+						<div class="col-md-7 col-md-offset-1 col-sm-7 col-sm-offset-1">
+              <div class="preview">
+                <div class="preview__title link-hover">Daily UI</div>
+                <div class="preview__subtitle">UI Challenge</div>
+              </div>
+            </div>
+					</div>
+				</a>
+
+				<a href="#">
+					<div class="row preview-row">
+						<div class="col-md-4 col-sm-4">
+              <img src="/assets/lgb-preview.jpg" class="img-responsive">
+            </div>
+
+						<div class="col-md-7 col-md-offset-1 col-sm-7 col-sm-offset-1">
+              <div class="preview">
+                <div class="preview__title link-hover">Traceable<sup>&reg;</sup> Products</div>
+                <div class="preview__subtitle">2017 — UI/UX</div>
+              </div>
+            </div>
+					</div>
+				</a>
+
+				<a href="#">
+					<div class="row preview-row">
+						<div class="col-md-4 col-sm-4">
+              <img src="/assets/lgb-preview.jpg" class="img-responsive">
+            </div>
+
+						<div class="col-md-7 col-md-offset-1 col-sm-7 col-sm-offset-1">
+              <div class="preview">
+                <div class="preview__title link-hover">Lost Golf Balls</div>
+                <div class="preview__subtitle">2017 — UI/UX</div>
+              </div>
+            </div>
+					</div>
+				</a>
+
+			</div>
+		</section>
+		-->
+
+		<footer>
+			<div class="container">
+				<a class="footer-brand" href="#">
+					<img src="assets/logo.png" />
+				</a>
+				<p>&copy; Elain Tsai. This site was developed by me, and only me.</p>
+			</div>
+		</footer>
 
 		<script src="/js/app.js"></script>
 	</body>

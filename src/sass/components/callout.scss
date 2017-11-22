@@ -1,0 +1,35 @@
+.callout {
+  $root: &;
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+      color: $black;
+      text-decoration: none;
+
+      &:hover {
+        .three-column__title {
+          color: $primary;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+  &--gray {
+    background-color: $bg-gray;
+  }
+
+  &--uncontained {
+
+    #{$root}__container {
+      width: 100%;
+    }
+  }
+}

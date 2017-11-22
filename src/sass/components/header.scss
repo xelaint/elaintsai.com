@@ -1,5 +1,53 @@
-header{
-	background-color: #333;
-	height: 50px;
-	color: #fff;
+.nav-header {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__container {
+    width: 80%;
+    padding: 50px 0 0 0;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    width: auto;
+    text-align: left;
+
+    img {
+      max-width: 60px;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    right: 0;
+    margin-left: auto;
+
+    &:hover {
+      color: $primary-dark;
+      transition: all 0.3s ease;
+    }
+
+    a {
+      font-size: 1rem;
+      font-weight: normal;
+      padding: 10px 5px;
+      margin: 0 10px;
+      color: $primary;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.25rem;
+
+      &:hover {
+        color: $primary-dark;
+        text-decoration: none;
+      }
+    }
+  }
 }

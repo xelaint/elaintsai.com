@@ -16,7 +16,9 @@
     "gulp-sass": "^2.2.0"
   },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "prestart": "npm install",
+    "start": "gulp"
   },
   "author": "elain tsai",
   "license": "ISC"
