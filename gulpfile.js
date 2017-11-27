@@ -2,12 +2,13 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var browserify = require('gulp-browserify');
+const nunjucks = require('gulp-nunjucks-render');
 
 var outputFolder = "docs";
 var srcFolder = "src/";
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['build'], function() {
 
     browserSync.init({
         server: "./docs"
@@ -41,8 +42,14 @@ gulp.task('sass', function() {
 });
 
 gulp.task('html', function() {
-  return gulp.src(srcFolder + "**/*.html")
-      .pipe(gulp.dest( outputFolder));
+  return gulp.src([
+            srcFolder + "**/*.html",
+            "!" + srcFolder+ "layouts/**/*.html"            
+        ])
+        .pipe(nunjucks({
+            path: ['src/layouts']
+          }))
+        .pipe(gulp.dest( outputFolder));
 });
 
 gulp.task('default', ['serve']);

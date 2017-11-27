@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">        
+		{% include "partials/head.html" %}
+	</head>
+	<body data-aos="fade-up">
+		{% include "partials/header.html" %}
+		
+		{% block content %}{% endblock %}
+
+		{% include "partials/footer.html" %}
+		{% include "partials/scripts.html" %}
+		
+	</body>
+</html>
