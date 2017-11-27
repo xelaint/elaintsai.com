@@ -1,9 +1,10 @@
 .button {
+  $root: &;
   background-color: $primary;
   padding: 10px 15px;
   color: $white;
   border-radius: 25px;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.3s ease;
   display: inline-block;
 
@@ -15,6 +16,18 @@
     color: $white;
 
     &:hover {
+      color: $white;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    border: 1px solid $white;
+    font-weight: 400;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white;
       color: $white;
     }
   }

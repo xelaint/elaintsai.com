@@ -2,6 +2,8 @@
 
 @import "variables";
 
+@import "mixins/breakpoints";
+
 @import "components/typography";
 @import "components/home";
 @import "components/footer";
