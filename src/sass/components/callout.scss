@@ -1,31 +1,44 @@
 .callout {
   $root: &;
+
   &__container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 75px 0;
     justify-content: center;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    text-align: center;
 
-    a {
-      color: $black;
-      text-decoration: none;
+    @include media($mobile) {
+      width: 80%;
+      text-align: left;
+    }
 
-      &:hover {
-        .column__title {
-          color: $primary;
-          transition: all 0.3s ease;
-        }
-      }
+    img {
+      max-width: 100%;
     }
   }
 
   &__info-block {
-    width: 50%;
-    margin: 75px 0;
+    width: 85%;
+    margin: 50px 0;
     padding: 15px 25px;
+    text-align: left;
+
+    @include media($mobile) {
+      width: 50%;
+      margin: 75px 0;
+    }
+
+    &:first-child {
+      margin: 0 0 50px 0;
+      
+      @include media($mobile) {
+        margin: 0 0 75px 0;
+      }
+    }
 
     a {
       color: $primary;
@@ -44,7 +57,7 @@
   &__title {
     font-family: Aleo, serif;
     font-weight: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: none;
     margin: 0 0 10px 0;
     padding: 0;
@@ -52,9 +65,14 @@
 
   &__subtitle {
     font-size: 1.25rem;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 2.25rem;
     margin: 0;
+    text-transform: none;
+
+    span {
+      font-style: italic;
+    }
   }
 
   .callout__subtitle + .button {
@@ -62,14 +80,42 @@
   }
 
   &__subheading {
+    display: inline-block;
     color: $medium-gray;
+    font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    font-size: 0.875rem;
+    margin-bottom: 22px;
+    padding-bottom: 3px;
+
+    &--underline {
+      border-bottom: 1px solid $medium-gray;
+    }
   }
 
   &--gray {
     background-color: $bg-gray;
+  }
+
+  &--dark-gray {
+    background-color: $dark-gray;
+
+    #{$root}__title, #{$root}__subtitle {
+      color: $white;
+    }
+
+    #{$root}__subheading {
+      margin-bottom: 50px;
+      color: $light-gray;
+
+      &--underline {
+        border-bottom: 1px solid $light-gray;
+      }
+    }
+  }
+
+  &--light-border {
+    border-bottom: 1px solid $medium-gray;
   }
 
   &--uncontained {
@@ -85,11 +131,9 @@
     }
   }
 
-  &--traceable {
-    background-color: #1F439C;
-
-    #{$root}__title, #{$root}__subtitle {
-      color: $white;
+  &--vert-top {
+    #{$root}__container {
+      align-items: flex-start;
     }
   }
 }

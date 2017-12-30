@@ -1,16 +1,24 @@
 .hero {
   $root: &;
   background-color: $white;
-  min-height: calc(100vh - 100px);
+  min-height: calc(70vh - 100px);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 
+  @include media($big-tablet) {
+    min-height: calc(100vh - 100px);
+  }
+
   &__container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 50px 0;
     justify-content: center;
+
+    @include media($mobile) {
+      width: 80%;
+    }
 
     &:before {
       content: " ";
@@ -20,20 +28,29 @@
 
   &__title {
     color: $dark-gray;
-    font-size: 4rem;
+    font-size: 2.5rem;
     text-transform: none;
     font-weight: 700;
     padding: 0;
     margin: 0;
+
+    @include media($mobile) {
+      font-size: 4rem;
+    }
   }
 
   &__subtitle {
     color: $primary;
     font-family: Aleo, serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: normal;
     padding: 25px 0 50px 0;
     margin: 0;
+
+    @include media($mobile) {
+      font-size: 2rem;
+    }
   }
 
   &__contact {
@@ -47,6 +64,16 @@
 
       &:hover {
         color: $white;
+      }
+    }
+  }
+
+  &--contained {
+    #{$root}__container {
+      width: 85%;
+
+      @include media($tablet) {
+        width: 50%;
       }
     }
   }

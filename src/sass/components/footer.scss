@@ -1,25 +1,33 @@
-footer {
+.footer {
   background-color: $white;
-  margin: 0px auto;
   padding: 50px 0;
 
-  .container {
+  &__container {
     width: 80%;
+    margin: 0 auto;
   }
 
-  a {
+  &__nav {
+    text-align: center;
+  }
+
+  &__nav-divider {
+    padding: 0 5px;
+  }
+
+  &__logo {
     display: block;
     text-align: center;
+    margin: 30px 0 15px 0; 
   }
 
   img {
     max-width: 50px;
   }
 
-  p {
+  &__copyright {
     color: $black;
     font-family: Aleo, serif;
-    padding: 15px 0 0 0;
     margin: 0;
     text-align: center;
     font-weight: 400;

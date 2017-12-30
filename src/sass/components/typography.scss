@@ -7,6 +7,8 @@ body, html {
 a {
   color: $primary;
   text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
 
   &:hover {
     color: $primary-dark;
