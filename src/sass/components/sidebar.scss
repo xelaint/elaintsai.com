@@ -1,0 +1,41 @@
+.sidebar {
+    $root: &;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 9999999;
+
+    &__nav {
+        
+    }
+
+    &__button {
+        width: 50px;
+        height: 50px;
+        background-color: $primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: $white;
+        font-size: 1.75rem;
+        margin-bottom: 1px;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+            background-color: $primary-dark;
+        }
+
+        &--disabled {
+            background-color: $light-gray;
+            color: $gray;
+
+            &:hover {
+                color: $gray;
+                text-decoration: none;
+                background-color: $light-gray;
+            }
+        }
+    }
+}
