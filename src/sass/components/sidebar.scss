@@ -2,6 +2,7 @@
     $root: &;
     position: fixed;
     top: 50%;
+    transform: translate(0, -50%);
     right: 0;
     z-index: 9999999;
 
