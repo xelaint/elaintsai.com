@@ -4,14 +4,14 @@ var sass        = require('gulp-sass');
 var browserify = require('gulp-browserify');
 const nunjucks = require('gulp-nunjucks-render');
 
-var outputFolder = "docs";
+var outputFolder = "dist";
 var srcFolder = "src/";
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['build'], function() {
 
     browserSync.init({
-        server: "./docs"
+        server: "./dist"
     });
 
     gulp.watch(srcFolder + "sass/components/*.scss", ['sass']);
