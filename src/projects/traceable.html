@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<div class="sidebar">
-    <div class="sidebar__nav">
-        <div class="sidebar__button sidebar__button--disabled"><i class="fa fa-angle-left"></i></div>
+<div class="sidenav">
+    <div class="sidenav__nav">
+        <div class="sidenav__button sidenav__button--disabled"><i class="fa fa-angle-left"></i></div>
     </div>
-    <div class="sidebar__nav">
-        <a href="/projects/lostgolfballs.html" class="sidebar__button"><i class="fa fa-angle-right"></i></a>
+    <div class="sidenav__nav">
+        <a href="/projects/lostgolfballs.html" class="sidenav__button"><i class="fa fa-angle-right"></i></a>
     </div>
 </div>
 
@@ -47,8 +47,8 @@
 			</div>
 			<div class="column-wrapper__description">
 				The goal is to restructure and solidify the user experience of the website while maintaining the integrity of the brand. <!--with <a href="http://atomicdesign.bradfrost.com/" target="_blank">atomic design</a> principles in the design and development process. !-->
-				<br>&rarr; The Process: <a href="#process">Transformative Design</a>
-				<br>&rarr; Sprint 1: <a href="#sprint-1">Home Page & Nav Bar</a>
+				<br>&rarr; <a href="#process" class="js-anchor-link">The Process: Transformative Design</a>
+				<br>&rarr; <a href="#sprint-1" class="js-anchor-link">Home Page & Nav Bar</a>
 				<!-- <br>&rarr; Sprint 2: <a href="#sprint-1">Content Pages</a> !-->
 			</div>
 		</div>
@@ -56,7 +56,7 @@
 	</div>
 </section>
 
-<section id="process" class="callout callout--uncontained callout--gray callout--light-border">
+<section id="process" class="callout callout--uncontained callout--gray callout--light-border js-anchor-link">
 	<div class="callout__container">
 		<div class="column">
 			<div data-aos="fade" class="column-wrapper column-wrapper--image">
@@ -76,7 +76,7 @@
 	</div>
 </section>
 
-<section id="sprint-1" class="callout callout--uncontained callout--gray callout--light-border">
+<section id="sprint-1" class="callout callout--uncontained callout--gray callout--light-border js-anchor-link">
 	<div class="callout__container">
 		<div class="column">
       		<div data-aos="fade" class="column-wrapper column-wrapper--image">
@@ -115,15 +115,15 @@
 		<div data-aos="fade" class="callout__info-block callout__info-block--highlight">
 			<div class="callout__title">Search</div>
 			<div class="callout__subtitle">
-				The last major component of the nav bar was to redesign the search. With limited space to work with, I displayed the search icon with a primary background to draw attention to it. Because the search input is only shown upon clicking or tapping, we had to find a way to   The input drops down when the icon is clicked or tapped, and it is fillable upon typing.
+				The last major component of the nav bar was to redesign the search. With limited space to work with, I displayed the search icon with a primary background to draw attention to it. The input drops down when the icon is clicked or tapped, and it is fillable upon typing.
 				<br><br>
-				During testing, a big success in this flow with customer service representatives was the ability to type their search fields without having to click on input. It eliminated one step they had to take care of while on the phone with a customer. They could reach their desired search results faster.
+				During testing, a big success in this flow with customer service representatives was the ability to type their search fields without having to click on the input field. It eliminated one step they had to take care of while on the phone with a customer. They could reach their desired search results faster.
 			</div>
 		</div>
 	</div>
 </section>
 
-<!--<section id="sprint-2" class="callout callout--uncontained callout--gray callout--light-border">
+<!--<section id="sprint-2" class="callout callout--uncontained callout--gray callout--light-border js-anchor-link">
 	<div class="callout__container">
 		<div data-aos="fade-up" class="callout__info-block callout__info-block--highlight">
 			<div class="callout__subheading">Sprint 2</div>
