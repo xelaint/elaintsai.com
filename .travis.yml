@@ -19,4 +19,4 @@ before_script:
 script: 
   - gulp build
 after_success:
-  - "./scripts/deploy.sh"
+  - "./scripts/envoy.sh"
