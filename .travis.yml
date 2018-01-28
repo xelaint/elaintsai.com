@@ -16,6 +16,7 @@ cache:
   - node_modules
 before_script:
 - npm install -g gulp-cli
+- chmod 600 deploy && mv deploy ~/.ssh/id_rsa
 script:
 - gulp build
 after_success:
